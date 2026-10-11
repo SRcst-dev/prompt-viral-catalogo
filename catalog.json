@@ -1,0 +1,877 @@
+{
+  "schemaVersion": 1,
+  "version": 1,
+  "updatedAt": "2026-10-11T00:00:00Z",
+  "categories": [
+    {
+      "id": "viral",
+      "name": "Vídeos Virais",
+      "icon": "flame",
+      "order": 1
+    },
+    {
+      "id": "pro",
+      "name": "Fotos Profissionais",
+      "icon": "person",
+      "order": 2
+    },
+    {
+      "id": "casais",
+      "name": "Casais",
+      "icon": "heart",
+      "order": 3
+    },
+    {
+      "id": "carros",
+      "name": "Carros e Motos",
+      "icon": "car",
+      "order": 4
+    },
+    {
+      "id": "anime",
+      "name": "Anime e Cartoon",
+      "icon": "sparkles",
+      "order": 5
+    },
+    {
+      "id": "cine",
+      "name": "Cinematográfico",
+      "icon": "film",
+      "order": 6
+    },
+    {
+      "id": "produtos",
+      "name": "Produtos e Publicidade",
+      "icon": "bag",
+      "order": 7
+    },
+    {
+      "id": "arq",
+      "name": "Arquitetura",
+      "icon": "house",
+      "order": 8
+    },
+    {
+      "id": "social",
+      "name": "Redes Sociais",
+      "icon": "share",
+      "order": 9
+    },
+    {
+      "id": "fantasia",
+      "name": "Fantasia",
+      "icon": "wand",
+      "order": 10
+    }
+  ],
+  "items": [
+    {
+      "id": "viral_001",
+      "title": "Abraço cinematográfico",
+      "description": "Transforme duas fotos num vídeo de abraço emocionante.",
+      "category": "casais",
+      "type": "video",
+      "gradient": [
+        "#F472B6",
+        "#8B5CF6"
+      ],
+      "aiTools": [
+        {
+          "name": "Kling AI",
+          "url": "https://klingai.com",
+          "pricing": "freemium",
+          "note": "Créditos diários limitados"
+        },
+        {
+          "name": "Luma Dream Machine",
+          "url": "https://lumalabs.ai/dream-machine",
+          "pricing": "freemium"
+        }
+      ],
+      "requiredMaterials": [
+        "Duas fotografias com boa iluminação"
+      ],
+      "prompt": "Cinematic scene of two people embracing naturally, realistic body movements, emotional atmosphere, soft lighting, detailed facial expressions, smooth camera movement, realistic physics, high-quality cinematic composition.",
+      "variables": [],
+      "tutorial": [
+        {
+          "title": "Separe as fotos",
+          "description": "Escolha duas fotos de frente, com boa luz e rostos visíveis."
+        },
+        {
+          "title": "Abra a ferramenta",
+          "description": "Acesse o gerador e entre em vídeo por imagem."
+        },
+        {
+          "title": "Envie as fotos",
+          "description": "Use a primeira como imagem inicial e a segunda como referência, se houver."
+        },
+        {
+          "title": "Cole o prompt",
+          "description": "Copie o prompt deste efeito e cole no campo de texto."
+        },
+        {
+          "title": "Ajuste",
+          "description": "Proporção 9:16 e duração de 5 segundos."
+        },
+        {
+          "title": "Gere",
+          "description": "Inicie a geração e aguarde a ferramenta processar."
+        }
+      ],
+      "settings": {
+        "aspectRatio": "9:16",
+        "duration": "5s"
+      },
+      "tips": [
+        "Fotos nítidas funcionam melhor.",
+        "Se o abraço sair estranho, gere de novo com a mesma imagem."
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "casal",
+        "abraço",
+        "viral"
+      ],
+      "isTrending": true,
+      "isPublished": true,
+      "popularity": 98,
+      "createdAt": "2026-10-09",
+      "promptPt": "Cena cinematográfica de duas pessoas se abraçando naturalmente, movimentos corporais realistas, atmosfera emocional, luz suave, expressões detalhadas, câmera suave."
+    },
+    {
+      "id": "viral_002",
+      "title": "Carro virando robô",
+      "description": "Um carro esportivo se transforma em robô gigante.",
+      "category": "carros",
+      "type": "video",
+      "gradient": [
+        "#38BDF8",
+        "#6366F1"
+      ],
+      "aiTools": [
+        {
+          "name": "Kling AI",
+          "url": "https://klingai.com",
+          "pricing": "freemium",
+          "note": "Créditos diários limitados"
+        }
+      ],
+      "requiredMaterials": [
+        "Foto de um carro, de lado ou três quartos"
+      ],
+      "prompt": "A {car_color} {car_model} parked in {environment}, suddenly transforming into a giant robot, metal panels unfolding, mechanical details, sparks, cinematic lighting, smooth camera orbit, realistic physics.",
+      "variables": [
+        {
+          "key": "car_model",
+          "label": "Modelo do carro",
+          "default": "sports car"
+        },
+        {
+          "key": "car_color",
+          "label": "Cor",
+          "default": "red",
+          "options": [
+            "red",
+            "black",
+            "white",
+            "blue"
+          ]
+        },
+        {
+          "key": "environment",
+          "label": "Ambiente",
+          "default": "a neon city street at night"
+        }
+      ],
+      "tutorial": [
+        {
+          "title": "Foto do carro",
+          "description": "Use uma foto lateral, com o carro inteiro no enquadramento."
+        },
+        {
+          "title": "Abra a ferramenta",
+          "description": "Entre em vídeo por imagem."
+        },
+        {
+          "title": "Envie a foto",
+          "description": "Ela será o primeiro quadro."
+        },
+        {
+          "title": "Personalize",
+          "description": "Preencha modelo, cor e ambiente abaixo e copie."
+        },
+        {
+          "title": "Ajuste",
+          "description": "9:16, 5 segundos."
+        },
+        {
+          "title": "Gere",
+          "description": "Aguarde o processamento."
+        }
+      ],
+      "settings": {
+        "aspectRatio": "9:16",
+        "duration": "5s"
+      },
+      "tips": [
+        "Fundo simples evita deformações.",
+        "Gere duas versões e escolha a melhor."
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "carro",
+        "robô",
+        "transformação"
+      ],
+      "isTrending": true,
+      "isPublished": true,
+      "popularity": 95,
+      "createdAt": "2026-10-10"
+    },
+    {
+      "id": "foto_001",
+      "title": "Retrato profissional de estúdio",
+      "description": "Foto de perfil com luz de estúdio a partir de uma selfie.",
+      "category": "pro",
+      "type": "image",
+      "gradient": [
+        "#64748B",
+        "#8B5CF6"
+      ],
+      "aiTools": [
+        {
+          "name": "Gemini",
+          "url": "https://gemini.google.com",
+          "pricing": "freemium"
+        },
+        {
+          "name": "ChatGPT",
+          "url": "https://chatgpt.com",
+          "pricing": "freemium"
+        }
+      ],
+      "requiredMaterials": [
+        "Uma selfie nítida do rosto"
+      ],
+      "prompt": "Professional studio headshot of the person in the reference photo, same face and features, wearing {outfit}, soft key light, neutral {background} background, shallow depth of field, sharp eyes, natural skin texture.",
+      "variables": [
+        {
+          "key": "outfit",
+          "label": "Roupa",
+          "default": "a dark blazer"
+        },
+        {
+          "key": "background",
+          "label": "Fundo",
+          "default": "gray",
+          "options": [
+            "gray",
+            "white",
+            "dark blue"
+          ]
+        }
+      ],
+      "tutorial": [
+        {
+          "title": "Selfie",
+          "description": "Rosto inteiro, olhando para a câmera, sem filtro."
+        },
+        {
+          "title": "Abra a ferramenta",
+          "description": "Entre num chat que aceite imagens."
+        },
+        {
+          "title": "Envie a selfie",
+          "description": "Anexe a foto."
+        },
+        {
+          "title": "Cole o prompt",
+          "description": "Personalize roupa e fundo e cole."
+        },
+        {
+          "title": "Peça variações",
+          "description": "Se precisar, peça outro ângulo ou luz."
+        }
+      ],
+      "settings": {
+        "aspectRatio": "4:5"
+      },
+      "tips": [
+        "Cabelo e rosto visíveis ajudam a manter a semelhança.",
+        "Peça 'mesmo rosto' para evitar mudanças."
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "retrato",
+        "perfil",
+        "linkedin"
+      ],
+      "isTrending": false,
+      "isPublished": true,
+      "popularity": 90,
+      "createdAt": "2026-10-05"
+    },
+    {
+      "id": "foto_002",
+      "title": "Você em estilo anime",
+      "description": "Sua foto como personagem de anime.",
+      "category": "anime",
+      "type": "image",
+      "gradient": [
+        "#F472B6",
+        "#38BDF8"
+      ],
+      "aiTools": [
+        {
+          "name": "Leonardo AI",
+          "url": "https://leonardo.ai",
+          "pricing": "freemium"
+        },
+        {
+          "name": "Gemini",
+          "url": "https://gemini.google.com",
+          "pricing": "freemium"
+        }
+      ],
+      "requiredMaterials": [
+        "Uma foto do rosto"
+      ],
+      "prompt": "Anime character portrait based on the reference photo, {anime_style} style, big expressive eyes, clean line art, vibrant colors, soft cel shading, detailed hair, studio-quality illustration.",
+      "variables": [
+        {
+          "key": "anime_style",
+          "label": "Estilo",
+          "default": "modern shonen",
+          "options": [
+            "modern shonen",
+            "studio ghibli inspired",
+            "90s retro"
+          ]
+        }
+      ],
+      "tutorial": [
+        {
+          "title": "Foto",
+          "description": "Rosto bem iluminado."
+        },
+        {
+          "title": "Abra a ferramenta",
+          "description": "Escolha geração de imagem com referência."
+        },
+        {
+          "title": "Envie a foto",
+          "description": "Anexe como referência."
+        },
+        {
+          "title": "Cole o prompt",
+          "description": "Escolha o estilo e cole."
+        }
+      ],
+      "settings": {
+        "aspectRatio": "1:1"
+      },
+      "tips": [
+        "Teste estilos diferentes com a mesma foto."
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "anime",
+        "cartoon",
+        "retrato"
+      ],
+      "isTrending": true,
+      "isPublished": true,
+      "popularity": 88,
+      "createdAt": "2026-10-08"
+    },
+    {
+      "id": "viral_003",
+      "title": "Foto antiga ganhando vida",
+      "description": "Anime uma foto antiga com movimentos sutis.",
+      "category": "viral",
+      "type": "video",
+      "gradient": [
+        "#F59E0B",
+        "#EF4444"
+      ],
+      "aiTools": [
+        {
+          "name": "Luma Dream Machine",
+          "url": "https://lumalabs.ai/dream-machine",
+          "pricing": "freemium"
+        },
+        {
+          "name": "Kling AI",
+          "url": "https://klingai.com",
+          "pricing": "freemium",
+          "note": "Créditos diários limitados"
+        }
+      ],
+      "requiredMaterials": [
+        "Uma foto antiga de uma ou mais pessoas"
+      ],
+      "prompt": "Gently animate this old photograph, subtle natural movements, soft blinking, slight head turn, gentle breathing, warm nostalgic tones, stable camera, realistic motion.",
+      "variables": [],
+      "tutorial": [
+        {
+          "title": "Foto",
+          "description": "Digitalize em boa resolução."
+        },
+        {
+          "title": "Abra a ferramenta",
+          "description": "Entre em vídeo por imagem."
+        },
+        {
+          "title": "Envie",
+          "description": "Use a foto como primeiro quadro."
+        },
+        {
+          "title": "Cole o prompt",
+          "description": "Mantenha os movimentos sutis."
+        },
+        {
+          "title": "Gere",
+          "description": "5 segundos bastam."
+        }
+      ],
+      "settings": {
+        "aspectRatio": "9:16",
+        "duration": "5s"
+      },
+      "tips": [
+        "Movimento sutil evita rostos deformados."
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "foto antiga",
+        "memória",
+        "viral"
+      ],
+      "isTrending": true,
+      "isPublished": true,
+      "popularity": 92,
+      "createdAt": "2026-10-07"
+    },
+    {
+      "id": "prod_001",
+      "title": "Produto flutuando em estúdio",
+      "description": "Foto de produto com cara de anúncio.",
+      "category": "produtos",
+      "type": "image",
+      "gradient": [
+        "#06B6D4",
+        "#8B5CF6"
+      ],
+      "aiTools": [
+        {
+          "name": "Gemini",
+          "url": "https://gemini.google.com",
+          "pricing": "freemium"
+        },
+        {
+          "name": "ChatGPT",
+          "url": "https://chatgpt.com",
+          "pricing": "freemium"
+        }
+      ],
+      "requiredMaterials": [
+        "Foto do produto com fundo limpo"
+      ],
+      "prompt": "Premium product photography of the product in the reference image, floating in mid-air, {surface} reflections, dramatic rim lighting, clean gradient background, ultra sharp, advertising style.",
+      "variables": [
+        {
+          "key": "surface",
+          "label": "Reflexo",
+          "default": "glossy",
+          "options": [
+            "glossy",
+            "water",
+            "glass"
+          ]
+        }
+      ],
+      "tutorial": [
+        {
+          "title": "Foto do produto",
+          "description": "Fundo liso e produto inteiro."
+        },
+        {
+          "title": "Envie à ferramenta",
+          "description": "Anexe a imagem."
+        },
+        {
+          "title": "Cole o prompt",
+          "description": "Escolha o reflexo."
+        },
+        {
+          "title": "Refine",
+          "description": "Peça mais luz ou outro fundo."
+        }
+      ],
+      "settings": {
+        "aspectRatio": "4:5"
+      },
+      "tips": [
+        "Evite logos pequenos: a IA pode distorcer."
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "produto",
+        "anúncio",
+        "loja"
+      ],
+      "isTrending": false,
+      "isPublished": true,
+      "popularity": 80,
+      "createdAt": "2026-10-03"
+    },
+    {
+      "id": "cine_001",
+      "title": "Cena de filme com você",
+      "description": "Coloque-se numa cena de cinema.",
+      "category": "cine",
+      "type": "image",
+      "gradient": [
+        "#0F172A",
+        "#F59E0B"
+      ],
+      "aiTools": [
+        {
+          "name": "Gemini",
+          "url": "https://gemini.google.com",
+          "pricing": "freemium"
+        },
+        {
+          "name": "Leonardo AI",
+          "url": "https://leonardo.ai",
+          "pricing": "freemium"
+        }
+      ],
+      "requiredMaterials": [
+        "Uma foto do rosto"
+      ],
+      "prompt": "Cinematic still of the person in the reference photo as the lead in a {genre} movie, anamorphic lens, film grain, dramatic lighting, teal and orange color grade, 35mm.",
+      "variables": [
+        {
+          "key": "genre",
+          "label": "Gênero",
+          "default": "sci-fi thriller",
+          "options": [
+            "sci-fi thriller",
+            "western",
+            "noir",
+            "fantasy"
+          ]
+        }
+      ],
+      "tutorial": [
+        {
+          "title": "Foto",
+          "description": "Rosto de frente."
+        },
+        {
+          "title": "Envie",
+          "description": "Anexe a foto."
+        },
+        {
+          "title": "Cole o prompt",
+          "description": "Escolha o gênero."
+        }
+      ],
+      "settings": {
+        "aspectRatio": "16:9"
+      },
+      "tips": [
+        "Quanto mais específico o gênero, melhor."
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "cinema",
+        "filme",
+        "retrato"
+      ],
+      "isTrending": false,
+      "isPublished": true,
+      "popularity": 84,
+      "createdAt": "2026-10-02"
+    },
+    {
+      "id": "arq_001",
+      "title": "Casa dos sonhos renderizada",
+      "description": "Imagem realista de uma casa a partir de uma ideia.",
+      "category": "arq",
+      "type": "image",
+      "gradient": [
+        "#10B981",
+        "#38BDF8"
+      ],
+      "aiTools": [
+        {
+          "name": "Bing Image Creator",
+          "url": "https://www.bing.com/images/create",
+          "pricing": "free"
+        },
+        {
+          "name": "Gemini",
+          "url": "https://gemini.google.com",
+          "pricing": "freemium"
+        }
+      ],
+      "requiredMaterials": [],
+      "prompt": "Photorealistic architectural render of a modern {house_style} house, large glass windows, landscaped garden, golden hour light, wide angle, ultra detailed.",
+      "variables": [
+        {
+          "key": "house_style",
+          "label": "Estilo",
+          "default": "minimalist",
+          "options": [
+            "minimalist",
+            "tropical",
+            "rustic"
+          ]
+        }
+      ],
+      "tutorial": [
+        {
+          "title": "Abra a ferramenta",
+          "description": "Entre no gerador de imagens gratuito."
+        },
+        {
+          "title": "Cole o prompt",
+          "description": "Escolha o estilo da casa."
+        },
+        {
+          "title": "Gere",
+          "description": "Escolha a melhor entre as opções."
+        }
+      ],
+      "settings": {
+        "aspectRatio": "16:9"
+      },
+      "tips": [
+        "Mencione materiais: madeira, concreto, vidro."
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "casa",
+        "arquitetura",
+        "decoração"
+      ],
+      "isTrending": false,
+      "isPublished": true,
+      "popularity": 70,
+      "createdAt": "2026-09-28"
+    },
+    {
+      "id": "social_001",
+      "title": "Mini-me em 3D",
+      "description": "Sua versão boneco 3D estilo desenho.",
+      "category": "social",
+      "type": "image",
+      "gradient": [
+        "#EC4899",
+        "#F59E0B"
+      ],
+      "aiTools": [
+        {
+          "name": "ChatGPT",
+          "url": "https://chatgpt.com",
+          "pricing": "freemium"
+        },
+        {
+          "name": "Gemini",
+          "url": "https://gemini.google.com",
+          "pricing": "freemium"
+        }
+      ],
+      "requiredMaterials": [
+        "Uma foto de corpo inteiro ou busto"
+      ],
+      "prompt": "Create a cute 3D cartoon figurine of the person in the reference photo, big head, glossy plastic look, {pose} pose, soft studio lighting, pastel background.",
+      "variables": [
+        {
+          "key": "pose",
+          "label": "Pose",
+          "default": "waving",
+          "options": [
+            "waving",
+            "thumbs up",
+            "sitting"
+          ]
+        }
+      ],
+      "tutorial": [
+        {
+          "title": "Foto",
+          "description": "Corpo inteiro funciona melhor."
+        },
+        {
+          "title": "Envie",
+          "description": "Anexe a foto."
+        },
+        {
+          "title": "Cole o prompt",
+          "description": "Escolha a pose."
+        }
+      ],
+      "settings": {
+        "aspectRatio": "1:1"
+      },
+      "tips": [
+        "Peça para manter a roupa igual."
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "3d",
+        "boneco",
+        "trend"
+      ],
+      "isTrending": true,
+      "isPublished": true,
+      "popularity": 94,
+      "createdAt": "2026-10-10"
+    },
+    {
+      "id": "fant_001",
+      "title": "Dragão sobrevoando a cidade",
+      "description": "Cena de fantasia épica em vídeo.",
+      "category": "fantasia",
+      "type": "video",
+      "gradient": [
+        "#7C3AED",
+        "#EF4444"
+      ],
+      "aiTools": [
+        {
+          "name": "Kling AI",
+          "url": "https://klingai.com",
+          "pricing": "freemium",
+          "note": "Créditos diários limitados"
+        },
+        {
+          "name": "Luma Dream Machine",
+          "url": "https://lumalabs.ai/dream-machine",
+          "pricing": "freemium"
+        }
+      ],
+      "requiredMaterials": [],
+      "prompt": "Epic cinematic shot of a giant {dragon_color} dragon flying over a medieval city at {time_of_day}, wings beating, clouds parting, volumetric light, sweeping camera, ultra realistic.",
+      "variables": [
+        {
+          "key": "dragon_color",
+          "label": "Cor do dragão",
+          "default": "black"
+        },
+        {
+          "key": "time_of_day",
+          "label": "Horário",
+          "default": "sunset",
+          "options": [
+            "sunset",
+            "dawn",
+            "night"
+          ]
+        }
+      ],
+      "tutorial": [
+        {
+          "title": "Abra a ferramenta",
+          "description": "Entre em texto para vídeo."
+        },
+        {
+          "title": "Cole o prompt",
+          "description": "Escolha cor e horário."
+        },
+        {
+          "title": "Ajuste",
+          "description": "16:9 ou 9:16, 5 segundos."
+        },
+        {
+          "title": "Gere",
+          "description": "Aguarde."
+        }
+      ],
+      "settings": {
+        "aspectRatio": "16:9",
+        "duration": "5s"
+      },
+      "tips": [
+        "Cenas com um único elemento principal saem melhores."
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "dragão",
+        "fantasia",
+        "épico"
+      ],
+      "isTrending": false,
+      "isPublished": true,
+      "popularity": 86,
+      "createdAt": "2026-10-01"
+    },
+    {
+      "id": "social_002",
+      "title": "Transição de roupa em vídeo",
+      "description": "Troque de roupa no meio do vídeo, estilo Reels.",
+      "category": "social",
+      "type": "video",
+      "gradient": [
+        "#22D3EE",
+        "#A855F7"
+      ],
+      "aiTools": [
+        {
+          "name": "Kling AI",
+          "url": "https://klingai.com",
+          "pricing": "freemium",
+          "note": "Créditos diários limitados"
+        }
+      ],
+      "requiredMaterials": [
+        "Duas fotos da mesma pessoa com roupas diferentes"
+      ],
+      "prompt": "Smooth transition, the person spins once and their outfit changes from the first image to the second image, seamless morph, dynamic camera, bright lighting, social media style.",
+      "variables": [],
+      "tutorial": [
+        {
+          "title": "Duas fotos",
+          "description": "Mesma pose e enquadramento."
+        },
+        {
+          "title": "Abra a ferramenta",
+          "description": "Escolha imagem inicial e final."
+        },
+        {
+          "title": "Envie",
+          "description": "Primeira e segunda foto."
+        },
+        {
+          "title": "Cole o prompt",
+          "description": "Copie e cole."
+        },
+        {
+          "title": "Gere",
+          "description": "5 segundos."
+        }
+      ],
+      "settings": {
+        "aspectRatio": "9:16",
+        "duration": "5s"
+      },
+      "tips": [
+        "Poses parecidas dão transições melhores."
+      ],
+      "difficulty": "hard",
+      "tags": [
+        "reels",
+        "transição",
+        "roupa"
+      ],
+      "isTrending": true,
+      "isPublished": true,
+      "popularity": 91,
+      "createdAt": "2026-10-11"
+    }
+  ]
+}

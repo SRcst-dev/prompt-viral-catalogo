@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prompt Viral — Painel</title>
+<style>
+:root{--bg:#121318;--s:#1c1e26;--s2:#262932;--t:#f4f4f8;--m:#a3a6b5;--p:#8b5cf6;--ok:#34d399;--bad:#f87171}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--t);font:15px/1.4 -apple-system,system-ui,sans-serif}
+header{padding:14px 20px;background:var(--s);display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+h1{font-size:18px;margin:0;flex:1}main{display:grid;grid-template-columns:320px 1fr;gap:0;min-height:calc(100vh - 58px)}
+@media(max-width:800px){main{grid-template-columns:1fr}}
+aside{background:var(--s);padding:12px;border-right:1px solid var(--s2);overflow:auto;max-height:calc(100vh - 58px)}
+section{padding:20px;max-width:820px}
+button{background:var(--p);color:#fff;border:0;border-radius:8px;padding:8px 14px;font:inherit;cursor:pointer}
+button.g{background:var(--s2)}button.d{background:var(--bad)}button:disabled{opacity:.5}
+input,select,textarea{width:100%;background:var(--s2);color:var(--t);border:1px solid #3a3d49;border-radius:8px;padding:8px;font:inherit}
+textarea{min-height:90px;font-family:ui-monospace,monospace}label{display:block;color:var(--m);font-size:12px;margin:12px 0 4px}
+.row{display:flex;gap:8px;align-items:center}.row>*{flex:1}.row>button{flex:0 0 auto}
+.item{padding:10px;border-radius:8px;cursor:pointer;display:flex;justify-content:space-between;gap:8px}.item:hover,.item.on{background:var(--s2)}
+.tag{font-size:11px;padding:2px 8px;border-radius:99px;background:#8b5cf633;color:var(--p)}.tag.off{background:#f8717133;color:var(--bad)}
+fieldset{border:1px solid var(--s2);border-radius:10px;margin:14px 0;padding:10px}legend{color:var(--m);padding:0 6px}
+#msg{padding:8px 20px;min-height:36px}.ok{color:var(--ok)}.err{color:var(--bad)}
+.cfg{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;padding:12px 20px;background:var(--s2)}
+</style>
+</head>
+<body>
+<header>
+  <h1>Prompt Viral — Painel do catálogo</h1>
+  <button class="g" id="load">Carregar do GitHub</button>
+  <button class="g" id="file">Abrir arquivo…</button>
+  <button class="g" id="dl">Baixar JSON</button>
+  <button id="pub">Publicar</button>
+  <input type="file" id="fileIn" accept="application/json" hidden>
+</header>
+<div class="cfg">
+  <div><label>Usuário/organização</label><input id="owner" placeholder="meu-usuario"></div>
+  <div><label>Repositório</label><input id="repo" placeholder="prompt-viral-catalogo"></div>
+  <div><label>Caminho do JSON</label><input id="path" value="catalog.json"></div>
+  <div><label>Branch</label><input id="branch" value="main"></div>
+  <div><label>Token do GitHub (só nesta aba)</label><input id="token" type="password" autocomplete="off" placeholder="ghp_… ou github_pat_…"></div>
+</div>
+<div id="msg"></div>
+<main>
+  <aside><div class="row"><button id="new">+ Novo efeito</button></div><label>Buscar</label><input id="q" placeholder="título ou tag"><div id="list"></div></aside>
+  <section id="form"><p style="color:var(--m)">Carregue o catálogo e escolha um efeito, ou crie um novo. O token fica só na memória desta aba e nunca é salvo. Quem não tem o token não consegue publicar.</p></section>
+</main>
+<script>
+const $=s=>document.querySelector(s);
+let cat={schemaVersion:1,version:0,updatedAt:'',categories:[],items:[]},cur=null,sha=null;
+const msg=(t,c)=>{$('#msg').textContent=t;$('#msg').className=c||''};
+for(const k of ['owner','repo','path','branch']){const v=localStorage.getItem('pv_'+k);if(v)$('#'+k).value=v;$('#'+k).onchange=()=>localStorage.setItem('pv_'+k,$('#'+k).value)}
+const api=()=>`https://api.github.com/repos/${$('#owner').value}/${$('#repo').value}/contents/`;
+const hdr=()=>({Authorization:'Bearer '+$('#token').value,Accept:'application/vnd.github+json'});
+const b64=s=>btoa(unescape(encodeURIComponent(s)));
+const unb64=s=>decodeURIComponent(escape(atob(s.replace(/\n/g,''))));
+
+function validate(c){
+  const ids=new Set(),errs=[];
+  for(const i of c.items){
+    if(!i.id||!i.title||!i.prompt)errs.push(`"${i.id||i.title||'?'}": id, título e prompt são obrigatórios`);
+    if(ids.has(i.id))errs.push(`id repetido: ${i.id}`);ids.add(i.id);
+    if(i.category&&!c.categories.some(x=>x.id===i.category))errs.push(`${i.id}: categoria inexistente`);
+    for(const v of i.variables||[])if(!i.prompt.includes('{'+v.key+'}'))errs.push(`${i.id}: variável {${v.key}} não aparece no prompt`);
+  }
+  return errs;
+}
+function renderList(){
+  const q=$('#q').value.toLowerCase();
+  $('#list').innerHTML='';
+  cat.items.filter(i=>!q||(i.title+' '+(i.tags||[]).join(' ')).toLowerCase().includes(q)).sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||'')).forEach(i=>{
+    const d=document.createElement('div');d.className='item'+(cur&&cur.id===i.id?' on':'');
+    d.innerHTML=`<span></span><span class="tag ${i.isPublished?'':'off'}">${i.isPublished?(i.isTrending?'em alta':'no ar'):'oculto'}</span>`;
+    d.firstChild.textContent=i.title;d.onclick=()=>edit(i.id);$('#list').append(d)});
+}
+const lines=a=>(a||[]).join('\n'),unlines=s=>s.split('\n').map(x=>x.trim()).filter(Boolean);
+function rows(id,list,fields){return `<div id="${id}">`+(list||[]).map((r,n)=>rowHtml(id,n,r,fields)).join('')+`</div><button class="g" onclick="addRow('${id}')">+ adicionar</button>`}
+function rowHtml(id,n,r,fields){return `<div class="row" data-r="${id}">`+fields.map(f=>f.t==='sel'?`<select data-f="${f.k}">${f.o.map(o=>`<option ${r[f.k]===o?'selected':''}>${o}</option>`).join('')}</select>`:`<input data-f="${f.k}" placeholder="${f.p}" value="${(r[f.k]??'').toString().replace(/"/g,'&quot;')}">`).join('')+`<button class="d" onclick="this.parentNode.remove()">×</button></div>`}
+const FIELDS={tools:[{k:'name',p:'Ferramenta'},{k:'url',p:'https://…'},{k:'pricing',t:'sel',o:['free','freemium','paid']},{k:'note',p:'Observação'}],vars:[{k:'key',p:'chave'},{k:'label',p:'Rótulo'},{k:'default',p:'Padrão'},{k:'options',p:'Opções separadas por vírgula'}],tut:[{k:'title',p:'Título'},{k:'description',p:'Descrição'},{k:'link',p:'Link (opcional)'}]};
+function addRow(id){const f=id==='tools'?FIELDS.tools:id==='vars'?FIELDS.vars:FIELDS.tut;$('#'+id).insertAdjacentHTML('beforeend',rowHtml(id,0,{},f))}
+const readRows=id=>[...document.querySelectorAll(`[data-r="${id}"]`)].map(r=>Object.fromEntries([...r.querySelectorAll('[data-f]')].map(e=>[e.dataset.f,e.value.trim()])));
+function blank(){return{id:'viral_'+String(cat.items.length+1).padStart(3,'0'),title:'',description:'',category:cat.categories[0]?.id||'',type:'video',gradient:['#8B5CF6','#38BDF8'],aiTools:[],requiredMaterials:[],prompt:'',variables:[],tutorial:[],settings:{},tips:[],difficulty:'easy',tags:[],isTrending:false,isPublished:false,popularity:0,createdAt:new Date().toISOString().slice(0,10)}}
+function edit(id){cur=id?cat.items.find(i=>i.id===id):blank();isNew=!id;renderList();renderForm()}
+let isNew=false;
+function renderForm(){
+  const i=cur,esc=s=>(s??'').toString().replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+  $('#form').innerHTML=`
+  <div class="row"><div><label>ID (não muda depois de publicar)</label><input id="f_id" value="${esc(i.id)}" ${isNew?'':'readonly'}></div>
+  <div><label>Criado em</label><input id="f_createdAt" type="date" value="${esc(i.createdAt)}"></div>
+  <div><label>Publicar a partir de (opcional)</label><input id="f_publishAt" type="date" value="${esc(i.publishAt)}"></div></div>
+  <label>Título</label><input id="f_title" value="${esc(i.title)}">
+  <label>Descrição</label><input id="f_description" value="${esc(i.description)}">
+  <div class="row"><div><label>Categoria</label><select id="f_category">${cat.categories.map(c=>`<option value="${c.id}" ${c.id===i.category?'selected':''}>${esc(c.name)}</option>`).join('')}</select></div>
+  <div><label>Tipo</label><select id="f_type"><option value="video" ${i.type==='video'?'selected':''}>Vídeo</option><option value="image" ${i.type==='image'?'selected':''}>Imagem</option></select></div>
+  <div><label>Dificuldade</label><select id="f_difficulty">${['easy','medium','hard'].map(d=>`<option ${d===i.difficulty?'selected':''}>${d}</option>`).join('')}</select></div></div>
+  <div class="row"><div><label>Miniatura (URL)</label><input id="f_thumbnailUrl" value="${esc(i.thumbnailUrl)}"></div><button class="g" onclick="upload('f_thumbnailUrl')">Enviar…</button></div>
+  <div class="row"><div><label>Vídeo de demonstração (URL)</label><input id="f_previewUrl" value="${esc(i.previewUrl)}"></div><button class="g" onclick="upload('f_previewUrl')">Enviar…</button></div>
+  <div class="row"><div><label>Gradiente (sem miniatura)</label><input id="f_g1" value="${esc(i.gradient[0])}"></div><div><label>&nbsp;</label><input id="f_g2" value="${esc(i.gradient[1])}"></div></div>
+  <fieldset><legend>Ferramentas de IA</legend>${rows('tools',i.aiTools,FIELDS.tools)}</fieldset>
+  <label>Materiais necessários (um por linha; vazio = nenhuma imagem)</label><textarea id="f_requiredMaterials">${esc(lines(i.requiredMaterials))}</textarea>
+  <label>Prompt (use {chave} para variáveis)</label><textarea id="f_prompt">${esc(i.prompt)}</textarea>
+  <label>Explicação em português (opcional)</label><textarea id="f_promptPt">${esc(i.promptPt)}</textarea>
+  <fieldset><legend>Variáveis de personalização</legend>${rows('vars',(i.variables||[]).map(v=>({...v,options:(v.options||[]).join(', ')})),FIELDS.vars)}</fieldset>
+  <fieldset><legend>Tutorial (passo a passo)</legend>${rows('tut',i.tutorial,FIELDS.tut)}</fieldset>
+  <div class="row"><div><label>Proporção</label><input id="f_ar" value="${esc(i.settings?.aspectRatio)}" placeholder="9:16"></div><div><label>Duração</label><input id="f_dur" value="${esc(i.settings?.duration)}" placeholder="5s"></div><div><label>Popularidade</label><input id="f_popularity" type="number" value="${i.popularity||0}"></div></div>
+  <label>Dicas (uma por linha)</label><textarea id="f_tips">${esc(lines(i.tips))}</textarea>
+  <label>Tags (separadas por vírgula)</label><input id="f_tags" value="${esc((i.tags||[]).join(', '))}">
+  <div class="row"><label><input type="checkbox" id="f_isTrending" ${i.isTrending?'checked':''} style="width:auto"> Em alta</label><label><input type="checkbox" id="f_isPublished" ${i.isPublished?'checked':''} style="width:auto"> Publicado</label></div>
+  <div class="row" style="margin-top:16px"><button onclick="saveItem()">Salvar efeito</button><button class="g" onclick="dupItem()">Duplicar</button><button class="d" onclick="delItem()">Excluir</button></div>`;
+}
+function saveItem(){
+  const v=id=>$('#'+id).value.trim(),opt=s=>s||undefined;
+  const it={id:v('f_id'),title:v('f_title'),description:v('f_description'),category:v('f_category'),type:v('f_type'),thumbnailUrl:opt(v('f_thumbnailUrl')),previewUrl:opt(v('f_previewUrl')),gradient:[v('f_g1')||'#8B5CF6',v('f_g2')||'#38BDF8'],
+   aiTools:readRows('tools').filter(t=>t.name).map(t=>({name:t.name,url:t.url,pricing:t.pricing,note:opt(t.note)})),requiredMaterials:unlines($('#f_requiredMaterials').value),prompt:$('#f_prompt').value.trim(),promptPt:opt($('#f_promptPt').value.trim()),
+   variables:readRows('vars').filter(x=>x.key).map(x=>({key:x.key,label:x.label,default:x.default,options:x.options?x.options.split(',').map(s=>s.trim()).filter(Boolean):undefined})),
+   tutorial:readRows('tut').filter(x=>x.title).map(x=>({title:x.title,description:x.description,link:opt(x.link)})),settings:{aspectRatio:opt(v('f_ar')),duration:opt(v('f_dur'))},
+   tips:unlines($('#f_tips').value),difficulty:v('f_difficulty'),tags:v('f_tags').split(',').map(s=>s.trim()).filter(Boolean),isTrending:$('#f_isTrending').checked,isPublished:$('#f_isPublished').checked,popularity:+v('f_popularity')||0,createdAt:v('f_createdAt'),publishAt:opt(v('f_publishAt'))};
+  if(!it.id||!it.title||!it.prompt)return msg('Preencha id, título e prompt.','err');
+  const n=cat.items.findIndex(x=>x.id===(isNew?it.id:cur.id));
+  if(isNew&&n>=0)return msg('Já existe um efeito com esse id.','err');
+  if(n>=0)cat.items[n]=it;else cat.items.push(it);
+  cur=it;isNew=false;renderList();renderForm();msg('Efeito salvo localmente. Clique em Publicar para enviar ao app.','ok');
+}
+function dupItem(){const c=JSON.parse(JSON.stringify(cur));c.id+='_copia';c.title+=' (cópia)';c.isPublished=false;cur=c;isNew=true;renderForm()}
+function delItem(){if(!confirm('Excluir este efeito do catálogo? Para só tirar do app, desmarque "Publicado".'))return;cat.items=cat.items.filter(x=>x.id!==cur.id);cur=null;$('#form').innerHTML='';renderList()}
+async function upload(target){
+  const inp=document.createElement('input');inp.type='file';inp.onchange=async()=>{
+    const f=inp.files[0];if(!f)return;if(!$('#token').value)return msg('Informe o token para enviar mídia.','err');
+    msg('Enviando '+f.name+'…');
+    const buf=new Uint8Array(await f.arrayBuffer());let s='';buf.forEach(b=>s+=String.fromCharCode(b));
+    const name='media/'+Date.now()+'-'+f.name.replace(/[^\w.\-]/g,'_');
+    const r=await fetch(api()+name,{method:'PUT',headers:hdr(),body:JSON.stringify({message:'Mídia: '+f.name,content:btoa(s),branch:$('#branch').value})});
+    if(!r.ok)return msg('Falha no envio: '+r.status,'err');
+    $('#'+target).value=`https://raw.githubusercontent.com/${$('#owner').value}/${$('#repo').value}/${$('#branch').value}/${name}`;msg('Mídia enviada.','ok')};
+  inp.click()}
+$('#load').onclick=async()=>{
+  const r=await fetch(api()+$('#path').value+'?ref='+$('#branch').value,{headers:hdr()});
+  if(r.status===404){sha=null;return msg('Catálogo ainda não existe nesse repositório. Abra um arquivo ou comece do zero e publique.','err')}
+  if(!r.ok)return msg('Não foi possível carregar: '+r.status,'err');
+  const j=await r.json();sha=j.sha;cat=JSON.parse(unb64(j.content));renderList();msg('Catálogo carregado (versão '+cat.version+').','ok')};
+$('#file').onclick=()=>$('#fileIn').click();
+$('#fileIn').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{cat=JSON.parse(await f.text());renderList();msg('Arquivo aberto.','ok')}catch{msg('JSON inválido.','err')}};
+$('#dl').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(cat,null,2)],{type:'application/json'}));a.download='catalog.json';a.click()};
+$('#new').onclick=()=>edit(null);$('#q').oninput=renderList;
+$('#pub').onclick=async()=>{
+  const errs=validate(cat);if(errs.length)return msg('Corrija antes de publicar: '+errs.join(' · '),'err');
+  if(!$('#token').value)return msg('Informe o token do GitHub.','err');
+  cat.version=(cat.version||0)+1;cat.updatedAt=new Date().toISOString();
+  const r=await fetch(api()+$('#path').value,{method:'PUT',headers:hdr(),body:JSON.stringify({message:'Catálogo v'+cat.version,content:b64(JSON.stringify(cat,null,2)),branch:$('#branch').value,sha:sha||undefined})});
+  if(!r.ok){cat.version--;return msg('Falha ao publicar: '+r.status+(r.status===409?' (o catálogo mudou; carregue de novo)':''),'err')}
+  sha=(await r.json()).content.sha;msg('Publicado: versão '+cat.version+'. O app atualiza na próxima abertura.','ok')};
+renderList();
+</script>
+</body>
+</html>
