@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": 2,
+  "version": 3,
   "updatedAt": "2026-10-28",
   "categories": [
     {
@@ -71,6 +71,9 @@
       "description": "Transforme duas fotos num vídeo de abraço emocionante.",
       "category": "casais",
       "type": "video",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1520975408777-d189f6edc46d?ixid=M3wxMTE3NTExfDB8MXxhbGx8fHx8fHx8fHwxNzkzMzEzMzM4fA&ixlib=rb-4.1.0&w=720&h=1280&fit=crop&crop=faces,entropy&q=75&fm=jpg",
+      "thumbnailCredit": "Foto de Quilia no Unsplash",
+      "thumbnailCreditUrl": "https://unsplash.com/@heyquilia?utm_source=prompt_viral&utm_medium=referral",
       "gradient": [
         "#F472B6",
         "#8B5CF6"
@@ -145,6 +148,9 @@
       "description": "Um carro esportivo se transforma em robô gigante.",
       "category": "carros",
       "type": "video",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1616397752794-349147c0365e?ixid=M3wxMTE3NTExfDB8MXxhbGx8fHx8fHx8fHwxNzkzMzEzMzM4fA&ixlib=rb-4.1.0&w=720&h=1280&fit=crop&crop=faces,entropy&q=75&fm=jpg",
+      "thumbnailCredit": "Foto de Amr Taha™ no Unsplash",
+      "thumbnailCreditUrl": "https://unsplash.com/@amr_taha?utm_source=prompt_viral&utm_medium=referral",
       "gradient": [
         "#38BDF8",
         "#6366F1"
@@ -235,6 +241,9 @@
       "description": "Foto de perfil com luz de estúdio a partir de uma selfie.",
       "category": "pro",
       "type": "image",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=M3wxMTE3NTExfDB8MXxhbGx8fHx8fHx8fHwxNzkzMzEzMzM4fA&ixlib=rb-4.1.0&w=720&h=1280&fit=crop&crop=faces,entropy&q=75&fm=jpg",
+      "thumbnailCredit": "Foto de Michael Dam no Unsplash",
+      "thumbnailCreditUrl": "https://unsplash.com/@michaeldam?utm_source=prompt_viral&utm_medium=referral",
       "gradient": [
         "#64748B",
         "#8B5CF6"
@@ -318,6 +327,9 @@
       "description": "Sua foto como personagem de anime.",
       "category": "anime",
       "type": "image",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1644417089758-54153e3a7a6b?ixid=M3wxMTE3NTExfDB8MXxhbGx8fHx8fHx8fHwxNzkzMzEzMzM5fA&ixlib=rb-4.1.0&w=720&h=1280&fit=crop&crop=faces,entropy&q=75&fm=jpg",
+      "thumbnailCredit": "Foto de Fuu J no Unsplash",
+      "thumbnailCreditUrl": "https://unsplash.com/@fuuj?utm_source=prompt_viral&utm_medium=referral",
       "gradient": [
         "#F472B6",
         "#38BDF8"
@@ -391,6 +403,9 @@
       "description": "Anime uma foto antiga com movimentos sutis.",
       "category": "viral",
       "type": "video",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1593968007877-b351c54bef61?ixid=M3wxMTE3NTExfDB8MXxhbGx8fHx8fHx8fHwxNzkzMzEzMzM5fA&ixlib=rb-4.1.0&w=720&h=1280&fit=crop&crop=faces,entropy&q=75&fm=jpg",
+      "thumbnailCredit": "Foto de Brett Jordan no Unsplash",
+      "thumbnailCreditUrl": "https://unsplash.com/@brett_jordan?utm_source=prompt_viral&utm_medium=referral",
       "gradient": [
         "#F59E0B",
         "#EF4444"
@@ -459,6 +474,9 @@
       "description": "Foto de produto com cara de anúncio.",
       "category": "produtos",
       "type": "image",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1613521076081-2820f9746a2d?ixid=M3wxMTE3NTExfDB8MXxhbGx8fHx8fHx8fHwxNzkzMzEzMzM5fA&ixlib=rb-4.1.0&w=720&h=1280&fit=crop&crop=faces,entropy&q=75&fm=jpg",
+      "thumbnailCredit": "Foto de Eve Maier no Unsplash",
+      "thumbnailCreditUrl": "https://unsplash.com/@maierfoto?utm_source=prompt_viral&utm_medium=referral",
       "gradient": [
         "#06B6D4",
         "#8B5CF6"
@@ -532,6 +550,9 @@
       "description": "Coloque-se numa cena de cinema.",
       "category": "cine",
       "type": "image",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1758956930535-5df8c10a6fad?ixid=M3wxMTE3NTExfDB8MXxhbGx8fHx8fHx8fHwxNzkzMzEzMzM5fA&ixlib=rb-4.1.0&w=720&h=1280&fit=crop&crop=faces,entropy&q=75&fm=jpg",
+      "thumbnailCredit": "Foto de Timofey Radkevich no Unsplash",
+      "thumbnailCreditUrl": "https://unsplash.com/@beauty_is_everywhere?utm_source=prompt_viral&utm_medium=referral",
       "gradient": [
         "#0F172A",
         "#F59E0B"
@@ -602,6 +623,9 @@
       "description": "Imagem realista de uma casa a partir de uma ideia.",
       "category": "arq",
       "type": "image",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1698994705178-d244d73ea573?ixid=M3wxMTE3NTExfDB8MXxhbGx8fHx8fHx8fHwxNzkzMzEzMzQwfA&ixlib=rb-4.1.0&w=720&h=1280&fit=crop&crop=faces,entropy&q=75&fm=jpg",
+      "thumbnailCredit": "Foto de juan verdaguer aguerrebehere no Unsplash",
+      "thumbnailCreditUrl": "https://unsplash.com/@urbanrival?utm_source=prompt_viral&utm_medium=referral",
       "gradient": [
         "#10B981",
         "#38BDF8"
@@ -669,6 +693,9 @@
       "description": "Sua versão boneco 3D estilo desenho.",
       "category": "social",
       "type": "image",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1792571393723-7c4eafd63027?ixid=M3wxMTE3NTExfDB8MXxhbGx8fHx8fHx8fHwxNzkzMzEzMzQwfA&ixlib=rb-4.1.0&w=720&h=1280&fit=crop&crop=faces,entropy&q=75&fm=jpg",
+      "thumbnailCredit": "Foto de Xander Sauviller no Unsplash",
+      "thumbnailCreditUrl": "https://unsplash.com/@xandersauviller?utm_source=prompt_viral&utm_medium=referral",
       "gradient": [
         "#EC4899",
         "#F59E0B"
@@ -738,6 +765,9 @@
       "description": "Cena de fantasia épica em vídeo.",
       "category": "fantasia",
       "type": "video",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1786536151122-931add7ee2d1?ixid=M3wxMTE3NTExfDB8MXxhbGx8fHx8fHx8fHwxNzkzMzEzMzQwfA&ixlib=rb-4.1.0&w=720&h=1280&fit=crop&crop=faces,entropy&q=75&fm=jpg",
+      "thumbnailCredit": "Foto de Robert Cavlovic no Unsplash",
+      "thumbnailCreditUrl": "https://unsplash.com/@robi_photography_?utm_source=prompt_viral&utm_medium=referral",
       "gradient": [
         "#7C3AED",
         "#EF4444"
@@ -816,6 +846,9 @@
       "description": "Troque de roupa no meio do vídeo, estilo Reels.",
       "category": "social",
       "type": "video",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1675261819929-7981f98db1e0?ixid=M3wxMTE3NTExfDB8MXxhbGx8fHx8fHx8fHwxNzkzMzEzMzQxfA&ixlib=rb-4.1.0&w=720&h=1280&fit=crop&crop=faces,entropy&q=75&fm=jpg",
+      "thumbnailCredit": "Foto de Lance Reis no Unsplash",
+      "thumbnailCreditUrl": "https://unsplash.com/@lancereis?utm_source=prompt_viral&utm_medium=referral",
       "gradient": [
         "#22D3EE",
         "#A855F7"
@@ -879,6 +912,9 @@
       "description": "Vire uma foto de estúdio dos anos 80, com cabelo volumoso e granulado de filme.",
       "category": "viral",
       "type": "image",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1470092922729-762ec45090ac?ixid=M3wxMTE3NTExfDB8MXxhbGx8fHx8fHx8fHwxNzkzMzEzMzQxfA&ixlib=rb-4.1.0&w=720&h=1280&fit=crop&crop=faces,entropy&q=75&fm=jpg",
+      "thumbnailCredit": "Foto de Riccardo Fissore no Unsplash",
+      "thumbnailCreditUrl": "https://unsplash.com/@riccardofissore?utm_source=prompt_viral&utm_medium=referral",
       "gradient": [
         "#F59E0B",
         "#EC4899"
@@ -950,6 +986,9 @@
       "description": "Junte uma foto atual e uma de infância num abraço emocionante.",
       "category": "casais",
       "type": "image",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1475609471617-0ef53b59cff5?ixid=M3wxMTE3NTExfDB8MXxhbGx8fHx8fHx8fHwxNzkzMzEzMzQxfA&ixlib=rb-4.1.0&w=720&h=1280&fit=crop&crop=faces,entropy&q=75&fm=jpg",
+      "thumbnailCredit": "Foto de Jordan Whitt no Unsplash",
+      "thumbnailCreditUrl": "https://unsplash.com/@jwwhitt?utm_source=prompt_viral&utm_medium=referral",
       "gradient": [
         "#FB7185",
         "#FBBF24"
@@ -1022,6 +1061,9 @@
       "description": "Vire uma caricatura divertida com os objetos do seu trabalho.",
       "category": "social",
       "type": "image",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1752542753998-cdb6f36c1094?ixid=M3wxMTE3NTExfDB8MXxhbGx8fHx8fHx8fHwxNzkzMzEzMzQyfA&ixlib=rb-4.1.0&w=720&h=1280&fit=crop&crop=faces,entropy&q=75&fm=jpg",
+      "thumbnailCredit": "Foto de Rene Spata no Unsplash",
+      "thumbnailCreditUrl": "https://unsplash.com/@easterneuropedesign?utm_source=prompt_viral&utm_medium=referral",
       "gradient": [
         "#22D3EE",
         "#6366F1"
@@ -1107,6 +1149,9 @@
       "description": "Você como boneco colecionável dentro da embalagem com acessórios.",
       "category": "social",
       "type": "image",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1582847030403-2c6ab8d63eae?ixid=M3wxMTE3NTExfDB8MXxhbGx8fHx8fHx8fHwxNzkzMzEzMzk1fA&ixlib=rb-4.1.0&w=720&h=1280&fit=crop&crop=faces,entropy&q=75&fm=jpg",
+      "thumbnailCredit": "Foto de Martijn Hendrikx no Unsplash",
+      "thumbnailCreditUrl": "https://unsplash.com/@m71?utm_source=prompt_viral&utm_medium=referral",
       "gradient": [
         "#A78BFA",
         "#F472B6"
@@ -1195,6 +1240,9 @@
       "description": "Sua versão fofa em adesivo, com cabeça grande e corpo pequeno.",
       "category": "anime",
       "type": "image",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1782192496616-955c5a0625de?ixid=M3wxMTE3NTExfDB8MXxhbGx8fHx8fHx8fHwxNzkzMzEzMzQyfA&ixlib=rb-4.1.0&w=720&h=1280&fit=crop&crop=faces,entropy&q=75&fm=jpg",
+      "thumbnailCredit": "Foto de Arina no Unsplash",
+      "thumbnailCreditUrl": "https://unsplash.com/@arina93?utm_source=prompt_viral&utm_medium=referral",
       "gradient": [
         "#F9A8D4",
         "#93C5FD"
@@ -1266,6 +1314,9 @@
       "description": "Seu próprio pôster de cinema com título e clima do gênero escolhido.",
       "category": "cine",
       "type": "image",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1635400138431-0bbde4d01484?ixid=M3wxMTE3NTExfDB8MXxhbGx8fHx8fHx8fHwxNzkzMzEzMzQyfA&ixlib=rb-4.1.0&w=720&h=1280&fit=crop&crop=faces,entropy&q=75&fm=jpg",
+      "thumbnailCredit": "Foto de Lennon Cheng no Unsplash",
+      "thumbnailCreditUrl": "https://unsplash.com/@lennonzf?utm_source=prompt_viral&utm_medium=referral",
       "gradient": [
         "#1E293B",
         "#F97316"
@@ -1356,6 +1407,9 @@
       "description": "Visual de filme 35 mm com flash, granulado e cor desbotada.",
       "category": "viral",
       "type": "image",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1644542774527-e52ae489ea35?ixid=M3wxMTE3NTExfDB8MXxhbGx8fHx8fHx8fHwxNzkzMzEzMzQzfA&ixlib=rb-4.1.0&w=720&h=1280&fit=crop&crop=faces,entropy&q=75&fm=jpg",
+      "thumbnailCredit": "Foto de romboide no Unsplash",
+      "thumbnailCreditUrl": "https://unsplash.com/@romboide?utm_source=prompt_viral&utm_medium=referral",
       "gradient": [
         "#FDE68A",
         "#B45309"
@@ -1427,6 +1481,9 @@
       "description": "Sua foto como quadro de filme animado em aquarela.",
       "category": "anime",
       "type": "image",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1785518413132-168296f05d02?ixid=M3wxMTE3NTExfDB8MXxhbGx8fHx8fHx8fHwxNzkzMzEzMzQzfA&ixlib=rb-4.1.0&w=720&h=1280&fit=crop&crop=faces,entropy&q=75&fm=jpg",
+      "thumbnailCredit": "Foto de The Metropolitan Museum of Art no Unsplash",
+      "thumbnailCreditUrl": "https://unsplash.com/@metropolitanmuseum?utm_source=prompt_viral&utm_medium=referral",
       "gradient": [
         "#86EFAC",
         "#60A5FA"
@@ -1498,6 +1555,9 @@
       "description": "Anime a sua figura colecionável num vídeo curto e divertido.",
       "category": "social",
       "type": "video",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1791714518141-d72e4de2e1b6?ixid=M3wxMTE3NTExfDB8MXxhbGx8fHx8fHx8fHwxNzkzMzEzMzk1fA&ixlib=rb-4.1.0&w=720&h=1280&fit=crop&crop=faces,entropy&q=75&fm=jpg",
+      "thumbnailCredit": "Foto de Xander Sauviller no Unsplash",
+      "thumbnailCreditUrl": "https://unsplash.com/@xandersauviller?utm_source=prompt_viral&utm_medium=referral",
       "gradient": [
         "#C084FC",
         "#22D3EE"
@@ -1564,6 +1624,9 @@
       "description": "Faça o seu bichinho falar uma frase engraçada em vídeo.",
       "category": "social",
       "type": "video",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1660088293649-2230ce6bb244?ixid=M3wxMTE3NTExfDB8MXxhbGx8fHx8fHx8fHwxNzkzMzEzMzQ0fA&ixlib=rb-4.1.0&w=720&h=1280&fit=crop&crop=faces,entropy&q=75&fm=jpg",
+      "thumbnailCredit": "Foto de Ömer Haktan Bulut no Unsplash",
+      "thumbnailCreditUrl": "https://unsplash.com/@omerhaktan?utm_source=prompt_viral&utm_medium=referral",
       "gradient": [
         "#FCD34D",
         "#34D399"
