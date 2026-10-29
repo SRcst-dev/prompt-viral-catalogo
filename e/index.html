@@ -33,6 +33,7 @@
   .toast.show { opacity: 1; }
   .steps { margin: 0; padding-left: 20px; color: var(--muted); }
   .hidden { display: none; }
+  .actions { margin-bottom: 24px; }
   footer { color: var(--muted); font-size: 13px; margin-top: 24px; }
 </style>
 </head>
@@ -40,6 +41,11 @@
 <main>
   <div class="brand">Prompt Viral</div>
   <div class="hero" id="hero"></div>
+
+  <div class="actions">
+    <a class="btn btn-primary" id="open" href="promptviral://efeito/">Abrir no app</a>
+    <a class="btn btn-secondary" id="store" aria-disabled="true">Em breve na App Store</a>
+  </div>
 
   <section id="loading"><p class="desc">Carregando efeito…</p></section>
 
@@ -67,8 +73,6 @@
     <p class="desc">Ele pode ter saído do catálogo. Veja outros efeitos no app.</p>
   </section>
 
-  <a class="btn btn-primary" id="open" href="promptviral://efeito/">Abrir no app</a>
-  <a class="btn btn-secondary" id="store" aria-disabled="true">Em breve na App Store</a>
 
   <footer>O Prompt Viral não gera imagens nem vídeos. As ferramentas são externas e podem exigir créditos ou assinatura.</footer>
 </main>
