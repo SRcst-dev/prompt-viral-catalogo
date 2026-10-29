@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "version": 1,
-  "updatedAt": "2026-10-11T00:00:00Z",
+  "version": 2,
+  "updatedAt": "2026-10-28",
   "categories": [
     {
       "id": "viral",
@@ -872,6 +872,774 @@
       "isPublished": true,
       "popularity": 91,
       "createdAt": "2026-10-11"
+    },
+    {
+      "id": "foto_003",
+      "title": "Retrato anos 80",
+      "description": "Vire uma foto de estúdio dos anos 80, com cabelo volumoso e granulado de filme.",
+      "category": "viral",
+      "type": "image",
+      "gradient": [
+        "#F59E0B",
+        "#EC4899"
+      ],
+      "aiTools": [
+        {
+          "name": "Gemini",
+          "url": "https://gemini.google.com",
+          "pricing": "freemium",
+          "note": "Tem uso grátis com limite diário"
+        },
+        {
+          "name": "ChatGPT",
+          "url": "https://chatgpt.com",
+          "pricing": "freemium",
+          "note": "Plano grátis com limite de imagens"
+        }
+      ],
+      "requiredMaterials": [
+        "Uma foto sua de rosto"
+      ],
+      "prompt": "Transform this photo into an authentic 1980s studio portrait. Keep the face 100% identical to the original. Voluminous 80s hairstyle, period clothing with shoulder pads and bold accessories, soft laser-style backdrop in pastel tones, warm dramatic studio light, subtle film grain and slight color fading like a printed photo from 1986.",
+      "variables": [],
+      "tutorial": [
+        {
+          "title": "Escolha a foto",
+          "description": "Use uma foto de rosto nítida, de frente e com boa luz."
+        },
+        {
+          "title": "Abra a ferramenta",
+          "description": "Entre no Gemini e comece uma conversa nova."
+        },
+        {
+          "title": "Envie a foto",
+          "description": "Anexe a foto na mensagem."
+        },
+        {
+          "title": "Cole o prompt",
+          "description": "Copie o prompt deste efeito e cole junto com a foto."
+        },
+        {
+          "title": "Gere e ajuste",
+          "description": "Envie. Se o rosto mudar, peça: mantenha o rosto idêntico ao da foto."
+        }
+      ],
+      "settings": {
+        "aspectRatio": "4:5"
+      },
+      "tips": [
+        "Fotos de frente mantêm melhor o rosto.",
+        "Troque 1980s por 1990s para a versão anos 90."
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "anos 80",
+        "retrato",
+        "retrô",
+        "viral"
+      ],
+      "isTrending": true,
+      "isPublished": true,
+      "popularity": 96,
+      "createdAt": "2026-10-28",
+      "promptPt": "Transforme esta foto em um retrato de estúdio autêntico dos anos 80. Mantenha o rosto 100% idêntico. Cabelo volumoso, roupa da época com ombreiras e acessórios marcantes, fundo pastel de estúdio, luz quente e dramática, granulado de filme e cor levemente desbotada."
+    },
+    {
+      "id": "foto_004",
+      "title": "Abraço no seu eu criança",
+      "description": "Junte uma foto atual e uma de infância num abraço emocionante.",
+      "category": "casais",
+      "type": "image",
+      "gradient": [
+        "#FB7185",
+        "#FBBF24"
+      ],
+      "aiTools": [
+        {
+          "name": "Gemini",
+          "url": "https://gemini.google.com",
+          "pricing": "freemium",
+          "note": "Tem uso grátis com limite diário"
+        },
+        {
+          "name": "ChatGPT",
+          "url": "https://chatgpt.com",
+          "pricing": "freemium",
+          "note": "Plano grátis com limite de imagens"
+        }
+      ],
+      "requiredMaterials": [
+        "Uma foto atual sua",
+        "Uma foto sua de criança"
+      ],
+      "prompt": "Create a realistic, heartwarming photo of the adult person from the first image gently hugging their younger self from the second image. Preserve both faces exactly as in the photos. Natural warm light, soft background, candid emotional moment, instant-film look with a slight flash.",
+      "variables": [],
+      "tutorial": [
+        {
+          "title": "Separe as fotos",
+          "description": "Uma foto atual e uma de infância, ambas com o rosto visível."
+        },
+        {
+          "title": "Abra a ferramenta",
+          "description": "Entre no Gemini e comece uma conversa nova."
+        },
+        {
+          "title": "Envie as duas fotos",
+          "description": "Anexe primeiro a foto atual e depois a de criança."
+        },
+        {
+          "title": "Cole o prompt",
+          "description": "Copie o prompt deste efeito e cole junto com as fotos."
+        },
+        {
+          "title": "Gere",
+          "description": "Envie e, se precisar, peça para ajustar a luz ou o enquadramento."
+        }
+      ],
+      "settings": {
+        "aspectRatio": "4:5"
+      },
+      "tips": [
+        "Fotos antigas digitalizadas com boa resolução dão resultado melhor.",
+        "Funciona também com fotos de pais e avós."
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "abraço",
+        "infância",
+        "emoção",
+        "viral"
+      ],
+      "isTrending": true,
+      "isPublished": true,
+      "popularity": 97,
+      "createdAt": "2026-10-28",
+      "promptPt": "Crie uma foto realista e emocionante da pessoa adulta da primeira imagem abraçando o seu eu criança da segunda imagem. Preserve os dois rostos exatamente. Luz quente, fundo suave, momento espontâneo, estilo foto instantânea com flash leve."
+    },
+    {
+      "id": "foto_005",
+      "title": "Caricatura da sua profissão",
+      "description": "Vire uma caricatura divertida com os objetos do seu trabalho.",
+      "category": "social",
+      "type": "image",
+      "gradient": [
+        "#22D3EE",
+        "#6366F1"
+      ],
+      "aiTools": [
+        {
+          "name": "ChatGPT",
+          "url": "https://chatgpt.com",
+          "pricing": "freemium",
+          "note": "Plano grátis com limite de imagens"
+        },
+        {
+          "name": "Gemini",
+          "url": "https://gemini.google.com",
+          "pricing": "freemium",
+          "note": "Tem uso grátis com limite diário"
+        }
+      ],
+      "requiredMaterials": [
+        "Uma foto sua de rosto"
+      ],
+      "prompt": "Create a fun caricature of the person in this photo as a {profissao}. Big expressive head with recognizable facial features, small body, surrounded by objects and tools of the profession, clean colorful background, polished digital illustration style.",
+      "variables": [
+        {
+          "key": "profissao",
+          "label": "Sua profissão",
+          "default": "professora",
+          "options": [
+            "professora",
+            "médico",
+            "programador",
+            "advogada",
+            "chef de cozinha",
+            "designer"
+          ]
+        }
+      ],
+      "tutorial": [
+        {
+          "title": "Escolha a foto",
+          "description": "Use uma foto de rosto nítida, de frente e com boa luz."
+        },
+        {
+          "title": "Abra a ferramenta",
+          "description": "Entre no ChatGPT e comece uma conversa nova."
+        },
+        {
+          "title": "Envie a foto",
+          "description": "Anexe a foto na mensagem."
+        },
+        {
+          "title": "Cole o prompt",
+          "description": "Copie o prompt deste efeito e cole junto com a foto."
+        },
+        {
+          "title": "Gere e ajuste",
+          "description": "Envie. Se o rosto mudar, peça: mantenha o rosto idêntico ao da foto."
+        }
+      ],
+      "settings": {
+        "aspectRatio": "1:1"
+      },
+      "tips": [
+        "Troque a profissão para fazer de amigos e colegas.",
+        "Peça cores da sua marca para usar no perfil profissional."
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "caricatura",
+        "profissão",
+        "perfil",
+        "viral"
+      ],
+      "isTrending": true,
+      "isPublished": true,
+      "popularity": 92,
+      "createdAt": "2026-10-28",
+      "promptPt": "Crie uma caricatura divertida da pessoa da foto como {profissao}. Cabeça grande e expressiva com traços reconhecíveis, corpo pequeno, cercada por objetos da profissão, fundo colorido e limpo, ilustração digital caprichada."
+    },
+    {
+      "id": "foto_006",
+      "title": "Boneco de ação na caixa",
+      "description": "Você como boneco colecionável dentro da embalagem com acessórios.",
+      "category": "social",
+      "type": "image",
+      "gradient": [
+        "#A78BFA",
+        "#F472B6"
+      ],
+      "aiTools": [
+        {
+          "name": "ChatGPT",
+          "url": "https://chatgpt.com",
+          "pricing": "freemium",
+          "note": "Plano grátis com limite de imagens"
+        },
+        {
+          "name": "Gemini",
+          "url": "https://gemini.google.com",
+          "pricing": "freemium",
+          "note": "Tem uso grátis com limite diário"
+        }
+      ],
+      "requiredMaterials": [
+        "Uma foto sua de corpo inteiro ou meio corpo"
+      ],
+      "prompt": "Turn the person in this photo into a realistic action figure inside a toy blister package. Keep the face recognizable. The package has a colorful card back with the name {nome} at the top and small accessories in separate slots: {acessorios}. Studio product lighting, glossy plastic reflections, photographed on a white surface.",
+      "variables": [
+        {
+          "key": "nome",
+          "label": "Nome na embalagem",
+          "default": "Seu Nome",
+          "options": null
+        },
+        {
+          "key": "acessorios",
+          "label": "Acessórios",
+          "default": "notebook, café e fone de ouvido",
+          "options": [
+            "notebook, café e fone de ouvido",
+            "câmera, mochila e mapa",
+            "bola, chuteira e troféu"
+          ]
+        }
+      ],
+      "tutorial": [
+        {
+          "title": "Escolha a foto",
+          "description": "Use uma foto de rosto nítida, de frente e com boa luz."
+        },
+        {
+          "title": "Abra a ferramenta",
+          "description": "Entre no ChatGPT e comece uma conversa nova."
+        },
+        {
+          "title": "Envie a foto",
+          "description": "Anexe a foto na mensagem."
+        },
+        {
+          "title": "Cole o prompt",
+          "description": "Copie o prompt deste efeito e cole junto com a foto."
+        },
+        {
+          "title": "Gere e ajuste",
+          "description": "Envie. Se o rosto mudar, peça: mantenha o rosto idêntico ao da foto."
+        }
+      ],
+      "settings": {
+        "aspectRatio": "3:4"
+      },
+      "tips": [
+        "Escolha acessórios que contam quem você é.",
+        "Nomes curtos aparecem melhor escritos na embalagem."
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "boneco",
+        "colecionável",
+        "brinquedo",
+        "viral"
+      ],
+      "isTrending": false,
+      "isPublished": true,
+      "popularity": 90,
+      "createdAt": "2026-10-28",
+      "promptPt": "Transforme a pessoa da foto em um boneco de ação realista dentro de uma embalagem de brinquedo. Rosto reconhecível. Cartela colorida com o nome {nome} no topo e acessórios em compartimentos: {acessorios}. Luz de estúdio, reflexo do plástico, fundo branco."
+    },
+    {
+      "id": "foto_007",
+      "title": "Figurinha chibi",
+      "description": "Sua versão fofa em adesivo, com cabeça grande e corpo pequeno.",
+      "category": "anime",
+      "type": "image",
+      "gradient": [
+        "#F9A8D4",
+        "#93C5FD"
+      ],
+      "aiTools": [
+        {
+          "name": "Gemini",
+          "url": "https://gemini.google.com",
+          "pricing": "freemium",
+          "note": "Tem uso grátis com limite diário"
+        },
+        {
+          "name": "ChatGPT",
+          "url": "https://chatgpt.com",
+          "pricing": "freemium",
+          "note": "Plano grátis com limite de imagens"
+        }
+      ],
+      "requiredMaterials": [
+        "Uma foto sua ou do seu pet"
+      ],
+      "prompt": "Create a cute chibi sticker of the subject in this photo: oversized head, small body, big shiny eyes, keep the recognizable features and hairstyle, soft 3D clay look, thick white sticker border, clean plain background.",
+      "variables": [],
+      "tutorial": [
+        {
+          "title": "Escolha a foto",
+          "description": "Use uma foto de rosto nítida, de frente e com boa luz."
+        },
+        {
+          "title": "Abra a ferramenta",
+          "description": "Entre no Gemini e comece uma conversa nova."
+        },
+        {
+          "title": "Envie a foto",
+          "description": "Anexe a foto na mensagem."
+        },
+        {
+          "title": "Cole o prompt",
+          "description": "Copie o prompt deste efeito e cole junto com a foto."
+        },
+        {
+          "title": "Gere e ajuste",
+          "description": "Envie. Se o rosto mudar, peça: mantenha o rosto idêntico ao da foto."
+        }
+      ],
+      "settings": {
+        "aspectRatio": "1:1"
+      },
+      "tips": [
+        "Fica ótimo com fotos de pets.",
+        "Peça um fundo transparente para usar como figurinha."
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "chibi",
+        "adesivo",
+        "fofo",
+        "pet"
+      ],
+      "isTrending": false,
+      "isPublished": true,
+      "popularity": 88,
+      "createdAt": "2026-10-28",
+      "promptPt": "Crie um adesivo chibi fofo do personagem da foto: cabeça grande, corpo pequeno, olhos grandes e brilhantes, mantendo os traços e o cabelo, visual 3D de massinha, borda branca grossa de adesivo, fundo liso."
+    },
+    {
+      "id": "foto_008",
+      "title": "Pôster de filme com você",
+      "description": "Seu próprio pôster de cinema com título e clima do gênero escolhido.",
+      "category": "cine",
+      "type": "image",
+      "gradient": [
+        "#1E293B",
+        "#F97316"
+      ],
+      "aiTools": [
+        {
+          "name": "ChatGPT",
+          "url": "https://chatgpt.com",
+          "pricing": "freemium",
+          "note": "Plano grátis com limite de imagens"
+        },
+        {
+          "name": "Gemini",
+          "url": "https://gemini.google.com",
+          "pricing": "freemium",
+          "note": "Tem uso grátis com limite diário"
+        }
+      ],
+      "requiredMaterials": [
+        "Uma foto sua de rosto"
+      ],
+      "prompt": "Create a cinematic movie poster starring the person in this photo. Keep the face identical. Genre: {genero}. Movie title in bold legible letters at the top: {titulo}. Dramatic key light, color grading typical of the genre, epic background scene, credits block at the bottom.",
+      "variables": [
+        {
+          "key": "genero",
+          "label": "Gênero do filme",
+          "default": "ação",
+          "options": [
+            "ação",
+            "terror",
+            "romance",
+            "ficção científica",
+            "comédia"
+          ]
+        },
+        {
+          "key": "titulo",
+          "label": "Título do filme",
+          "default": "A Grande Virada",
+          "options": null
+        }
+      ],
+      "tutorial": [
+        {
+          "title": "Escolha a foto",
+          "description": "Use uma foto de rosto nítida, de frente e com boa luz."
+        },
+        {
+          "title": "Abra a ferramenta",
+          "description": "Entre no ChatGPT e comece uma conversa nova."
+        },
+        {
+          "title": "Envie a foto",
+          "description": "Anexe a foto na mensagem."
+        },
+        {
+          "title": "Cole o prompt",
+          "description": "Copie o prompt deste efeito e cole junto com a foto."
+        },
+        {
+          "title": "Gere e ajuste",
+          "description": "Envie. Se o rosto mudar, peça: mantenha o rosto idêntico ao da foto."
+        }
+      ],
+      "settings": {
+        "aspectRatio": "2:3"
+      },
+      "tips": [
+        "Títulos curtos saem escritos com menos erro.",
+        "Teste gêneros diferentes com a mesma foto."
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "pôster",
+        "filme",
+        "cinema",
+        "viral"
+      ],
+      "isTrending": true,
+      "isPublished": true,
+      "popularity": 91,
+      "createdAt": "2026-10-28",
+      "promptPt": "Crie um pôster de filme estrelado pela pessoa da foto, com o rosto idêntico. Gênero: {genero}. Título em letras grandes e legíveis no topo: {titulo}. Luz dramática, cores do gênero, cenário épico e créditos na parte de baixo."
+    },
+    {
+      "id": "foto_009",
+      "title": "Foto de câmera descartável",
+      "description": "Visual de filme 35 mm com flash, granulado e cor desbotada.",
+      "category": "viral",
+      "type": "image",
+      "gradient": [
+        "#FDE68A",
+        "#B45309"
+      ],
+      "aiTools": [
+        {
+          "name": "Gemini",
+          "url": "https://gemini.google.com",
+          "pricing": "freemium",
+          "note": "Tem uso grátis com limite diário"
+        },
+        {
+          "name": "ChatGPT",
+          "url": "https://chatgpt.com",
+          "pricing": "freemium",
+          "note": "Plano grátis com limite de imagens"
+        }
+      ],
+      "requiredMaterials": [
+        "Uma foto sua"
+      ],
+      "prompt": "Restyle this photo as if it was taken with a cheap disposable film camera in the late 90s. Keep the people and faces identical. Harsh direct flash, visible film grain, slight light leak on one side, faded warm colors, slightly soft focus, date stamp in orange in the bottom right corner.",
+      "variables": [],
+      "tutorial": [
+        {
+          "title": "Escolha a foto",
+          "description": "Use uma foto de rosto nítida, de frente e com boa luz."
+        },
+        {
+          "title": "Abra a ferramenta",
+          "description": "Entre no Gemini e comece uma conversa nova."
+        },
+        {
+          "title": "Envie a foto",
+          "description": "Anexe a foto na mensagem."
+        },
+        {
+          "title": "Cole o prompt",
+          "description": "Copie o prompt deste efeito e cole junto com a foto."
+        },
+        {
+          "title": "Gere e ajuste",
+          "description": "Envie. Se o rosto mudar, peça: mantenha o rosto idêntico ao da foto."
+        }
+      ],
+      "settings": {
+        "aspectRatio": "3:2"
+      },
+      "tips": [
+        "Fotos de festa e viagem ficam as melhores.",
+        "Peça várias fotos para montar um álbum."
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "filme",
+        "35mm",
+        "retrô",
+        "flash"
+      ],
+      "isTrending": false,
+      "isPublished": true,
+      "popularity": 86,
+      "createdAt": "2026-10-28",
+      "promptPt": "Refaça esta foto como se fosse tirada com uma câmera descartável no fim dos anos 90. Pessoas e rostos idênticos. Flash direto, granulado de filme, vazamento de luz num canto, cores quentes desbotadas, foco suave e data laranja no canto."
+    },
+    {
+      "id": "foto_010",
+      "title": "Cena de animação pintada à mão",
+      "description": "Sua foto como quadro de filme animado em aquarela.",
+      "category": "anime",
+      "type": "image",
+      "gradient": [
+        "#86EFAC",
+        "#60A5FA"
+      ],
+      "aiTools": [
+        {
+          "name": "ChatGPT",
+          "url": "https://chatgpt.com",
+          "pricing": "freemium",
+          "note": "Plano grátis com limite de imagens"
+        },
+        {
+          "name": "Gemini",
+          "url": "https://gemini.google.com",
+          "pricing": "freemium",
+          "note": "Tem uso grátis com limite diário"
+        }
+      ],
+      "requiredMaterials": [
+        "Uma foto sua ou de um lugar"
+      ],
+      "prompt": "Restyle this photo as a frame from a hand-painted animated film: soft painterly light, watercolor sky with big clouds, gentle pastel colors, detailed countryside background, characters keep their pose and recognizable features in a simple hand-drawn style.",
+      "variables": [],
+      "tutorial": [
+        {
+          "title": "Escolha a foto",
+          "description": "Use uma foto de rosto nítida, de frente e com boa luz."
+        },
+        {
+          "title": "Abra a ferramenta",
+          "description": "Entre no ChatGPT e comece uma conversa nova."
+        },
+        {
+          "title": "Envie a foto",
+          "description": "Anexe a foto na mensagem."
+        },
+        {
+          "title": "Cole o prompt",
+          "description": "Copie o prompt deste efeito e cole junto com a foto."
+        },
+        {
+          "title": "Gere e ajuste",
+          "description": "Envie. Se o rosto mudar, peça: mantenha o rosto idêntico ao da foto."
+        }
+      ],
+      "settings": {
+        "aspectRatio": "16:9"
+      },
+      "tips": [
+        "Fotos ao ar livre combinam mais com o estilo.",
+        "Funciona com fotos de família e de viagem."
+      ],
+      "difficulty": "easy",
+      "tags": [
+        "animação",
+        "aquarela",
+        "desenho",
+        "viral"
+      ],
+      "isTrending": false,
+      "isPublished": true,
+      "popularity": 89,
+      "createdAt": "2026-10-28",
+      "promptPt": "Refaça esta foto como um quadro de filme de animação pintado à mão: luz suave, céu em aquarela com nuvens grandes, cores pastel, fundo de campo detalhado, pessoas na mesma pose com traços reconhecíveis em desenho simples."
+    },
+    {
+      "id": "viral_004",
+      "title": "Boneco 3D ganhando vida",
+      "description": "Anime a sua figura colecionável num vídeo curto e divertido.",
+      "category": "social",
+      "type": "video",
+      "gradient": [
+        "#C084FC",
+        "#22D3EE"
+      ],
+      "aiTools": [
+        {
+          "name": "Kling AI",
+          "url": "https://klingai.com",
+          "pricing": "freemium",
+          "note": "Créditos diários limitados"
+        }
+      ],
+      "requiredMaterials": [
+        "A imagem do seu boneco 3D (veja o efeito Mini-me em 3D)"
+      ],
+      "prompt": "The collectible figurine comes to life on the desk: it looks around, waves at the camera and does a small happy dance on its transparent base, realistic plastic material, soft desk lamp light, shallow depth of field, smooth slow camera push-in.",
+      "variables": [],
+      "tutorial": [
+        {
+          "title": "Faça o boneco",
+          "description": "Gere a imagem do boneco com o efeito Mini-me em 3D."
+        },
+        {
+          "title": "Abra a ferramenta",
+          "description": "Entre no Kling AI em vídeo a partir de imagem."
+        },
+        {
+          "title": "Envie a imagem",
+          "description": "Use a imagem do boneco como quadro inicial."
+        },
+        {
+          "title": "Cole o prompt",
+          "description": "Copie o prompt deste efeito e cole no campo de texto."
+        },
+        {
+          "title": "Ajuste e gere",
+          "description": "Proporção 9:16 e 5 segundos. Inicie a geração."
+        }
+      ],
+      "settings": {
+        "aspectRatio": "9:16",
+        "duration": "5s"
+      },
+      "tips": [
+        "Imagens com fundo simples animam melhor.",
+        "Troque a dancinha por outro gesto, como um tchau."
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "boneco",
+        "3d",
+        "animação",
+        "vídeo"
+      ],
+      "isTrending": true,
+      "isPublished": true,
+      "popularity": 93,
+      "createdAt": "2026-10-28",
+      "promptPt": "O boneco colecionável ganha vida na mesa: olha em volta, acena para a câmera e faz uma dancinha na base transparente, material de plástico realista, luz de luminária, fundo desfocado, câmera se aproximando devagar."
+    },
+    {
+      "id": "viral_005",
+      "title": "Seu pet falando",
+      "description": "Faça o seu bichinho falar uma frase engraçada em vídeo.",
+      "category": "social",
+      "type": "video",
+      "gradient": [
+        "#FCD34D",
+        "#34D399"
+      ],
+      "aiTools": [
+        {
+          "name": "Gemini",
+          "url": "https://gemini.google.com",
+          "pricing": "freemium",
+          "note": "Tem uso grátis com limite diário"
+        },
+        {
+          "name": "Kling AI",
+          "url": "https://klingai.com",
+          "pricing": "freemium",
+          "note": "Créditos diários limitados"
+        }
+      ],
+      "requiredMaterials": [
+        "Uma foto do seu pet de frente"
+      ],
+      "prompt": "Animate the pet in this photo talking to the camera in a funny, expressive way, with natural mouth movements synced to the line: \"{fala}\". Keep the pet's look identical, cozy home background, warm light, handheld phone camera feel.",
+      "variables": [
+        {
+          "key": "fala",
+          "label": "O que o pet diz",
+          "default": "Cadê o meu petisco?",
+          "options": [
+            "Cadê o meu petisco?",
+            "Hoje eu não saio da cama",
+            "Quem mexeu no meu pote?"
+          ]
+        }
+      ],
+      "tutorial": [
+        {
+          "title": "Escolha a foto",
+          "description": "Use uma foto do pet de frente, com a boca visível."
+        },
+        {
+          "title": "Abra a ferramenta",
+          "description": "No Gemini, peça para criar um vídeo e anexe a foto."
+        },
+        {
+          "title": "Cole o prompt",
+          "description": "Copie o prompt com a frase que você escreveu e cole."
+        },
+        {
+          "title": "Gere",
+          "description": "Envie e aguarde o vídeo com som."
+        },
+        {
+          "title": "Refaça se precisar",
+          "description": "Se a boca não mexer, peça para deixar o movimento mais visível."
+        }
+      ],
+      "settings": {
+        "aspectRatio": "9:16",
+        "duration": "8s"
+      },
+      "tips": [
+        "Frases curtas ficam mais naturais.",
+        "Gatos e cachorros de frente dão o melhor resultado."
+      ],
+      "difficulty": "medium",
+      "tags": [
+        "pet",
+        "falando",
+        "engraçado",
+        "vídeo"
+      ],
+      "isTrending": true,
+      "isPublished": true,
+      "popularity": 95,
+      "createdAt": "2026-10-28",
+      "promptPt": "Anime o pet da foto falando com a câmera de um jeito engraçado, com a boca sincronizada à frase: \"{fala}\". Mantenha a aparência do pet, fundo de casa aconchegante, luz quente, jeito de vídeo de celular."
     }
   ]
 }
